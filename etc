@@ -14,8 +14,8 @@ class Lesson_10_Activity {
         b=reader.nextDouble();
         System.out.printl("Please enter your 'c' value: ");
         c=reader.nextDouble();
-        x1=(-b+Math.sqrt(b^2-4*a*c))/(2a);
-        x2=(-b-Math.sqrt(b^2-4*a*c))/(2a);
+        x1=(-b+Math.sqrt((b*b)-4*a*c))/(2a);
+        x2=(-b-Math.sqrt((b*b)-4*a*c))/(2a);
         System.out.println("The values for 'x' are "+x1+" and "+x2+".");
         
 
