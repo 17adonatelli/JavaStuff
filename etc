@@ -1,2 +1,25 @@
 import.util.Scanner
 import.util.Math
+
+
+class Lesson_10_Activity {
+    public static void main(String[] args) {
+      
+        Scanner reader=new Scanner(System.in);
+        double a, b, c, x1, x2;
+        System.out.println(" Welcome to the quadratic formula solver")
+        System.out.printl("Please enter your 'a' value: ");
+        a=reader.nextDouble();
+        System.out.printl("Please enter your 'b' value: ");
+        b=reader.nextDouble();
+        System.out.printl("Please enter your 'c' value: ");
+        c=reader.nextDouble();
+        x1=(-b+Math.sqrt(b^2-4*a*c))/(2a);
+        x2=(-b-Math.sqrt(b^2-4*a*c))/(2a);
+        System.out.println("The values for 'x' are "+x1+" and "+x2+".");
+        
+
+    
+
+    }
+}
