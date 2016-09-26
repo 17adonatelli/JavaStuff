@@ -1,0 +1,29 @@
+import java.util.*;
+
+
+
+class Range_Equation_Max_Angle {
+    public static void main(String[] args) {
+    
+double radians,velocity,range,height,pi=3.14,bestrange=0,bestangle=0;
+Scanner reader=new Scanner(System.in);
+System.out.println("Welcome to the range equation max angle solver!");
+System.out.println("Please enter your velocity: ");
+velocity= reader.nextDouble();
+System.out.println("Please enter your height: ");
+height= reader.nextDouble();
+for(double i=0;i<=90;i+=0.1)
+{
+radians=Math.toRadians(i);
+range= (velocity*Math.cos(radians)/9.8)*(velocity*Math.sin(radians)+Math.sqrt(velocity*velocity*Math.sin(radians)*Math.sin(radians)+2*9.8*height));
+	if(range>bestrange)
+	{
+		bestrange=range;
+		bestangle=i;
+	}
+}
+System.out.println("The best angle is "+bestangle+" with a range of "+bestrange+".");
+
+
+	}
+}
