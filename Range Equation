@@ -1,0 +1,22 @@
+import java.util.*;
+
+
+
+class Range_Equation {
+    public static void main(String[] args) {
+    
+double angle,radians,velocity,range,height,pi=3.14;
+Scanner reader=new Scanner(System.in);
+System.out.println("Welcome to the range equation solver!");
+System.out.println("Please enter your angle in degrees: ");
+angle= reader.nextDouble();
+System.out.println("Please enter your velocity: ");
+velocity= reader.nextDouble();
+System.out.println("Please enter your height: ");
+height= reader.nextDouble();
+
+radians=Math.toRadians(angle);
+range= (velocity*Math.cos(radians)/9.8)*(velocity*Math.sin(radians)+Math.sqrt(velocity*velocity*Math.sin(radians)*Math.sin(radians)+2*9.8*height));
+System.out.println("The range is "+range+".");
+	}
+}
