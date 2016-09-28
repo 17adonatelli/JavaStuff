@@ -1,0 +1,91 @@
+import java.util.*;
+
+public class mastermind {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner reader=new Scanner(System.in);
+		
+		int[] solution={-1,-1,-1,-1};
+		for(int i=0;i<4;i++)
+		{
+			double randomnum;
+			int check;
+			
+			if(i==0)
+			{
+				check=0;
+				while(check==0)
+				{
+					randomnum=Math.random()*10;
+					solution[i]=(int)randomnum;
+					
+					if(solution[i]!=solution[1]&&solution[i]!=solution[2]&&solution[i]!=solution[3])
+					{
+						solution[i]=(int)randomnum;
+						System.out.println(solution[i]);
+						check=1;
+					}
+				}
+				
+			}
+			if(i==1)
+			{
+				check=0;
+				while(check==0)
+				{
+					randomnum=Math.random()*10;
+					solution[i]=(int)randomnum;
+					
+					if(solution[i]!=solution[0]&&solution[i]!=solution[2]&&solution[i]!=solution[3])
+					{
+						solution[i]=(int)randomnum;
+						System.out.println(solution[i]);
+						check=1;
+					}
+				}
+				
+			}
+			if(i==2)
+			{
+				check=0;
+				while(check==0)
+				{
+					randomnum=Math.random()*10;
+					solution[i]=(int)randomnum;
+					
+					if(solution[i]!=solution[0]&&solution[i]!=solution[1]&&solution[i]!=solution[3])
+					{
+						solution[i]=(int)randomnum;
+						System.out.println(solution[i]);
+						check=1;
+					}
+				}
+				
+			}
+			if(i==3)
+			{
+				check=0;
+				while(check==0)
+				{
+					randomnum=Math.random()*10;
+					solution[i]=(int)randomnum;
+					
+					if(solution[i]!=solution[0]&&solution[i]!=solution[1]&&solution[i]!=solution[2])
+					{
+						solution[i]=(int)randomnum;
+						System.out.println(solution[i]);
+						check=1;
+					}
+				}
+				
+			}
+		}
+		
+		
+		
+		
+
+	}
+
+}
