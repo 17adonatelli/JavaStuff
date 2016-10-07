@@ -23,7 +23,7 @@ public class mastermind {
 					if(solution[i]!=solution[1]&&solution[i]!=solution[2]&&solution[i]!=solution[3])
 					{
 						solution[i]=(int)randomnum;
-						System.out.println(solution[i]);
+						
 						check=1;
 					}
 				}
@@ -40,7 +40,7 @@ public class mastermind {
 					if(solution[i]!=solution[0]&&solution[i]!=solution[2]&&solution[i]!=solution[3])
 					{
 						solution[i]=(int)randomnum;
-						System.out.println(solution[i]);
+						
 						check=1;
 					}
 				}
@@ -57,7 +57,7 @@ public class mastermind {
 					if(solution[i]!=solution[0]&&solution[i]!=solution[1]&&solution[i]!=solution[3])
 					{
 						solution[i]=(int)randomnum;
-						System.out.println(solution[i]);
+						
 						check=1;
 					}
 				}
@@ -74,11 +74,68 @@ public class mastermind {
 					if(solution[i]!=solution[0]&&solution[i]!=solution[1]&&solution[i]!=solution[2])
 					{
 						solution[i]=(int)randomnum;
-						System.out.println(solution[i]);
+						
 						check=1;
 					}
 				}
 				
+			}
+			
+			
+		}
+		System.out.println("Welcome to the game of mastermind, you will have ten guesses to find the correct number");
+		for(int i=0;i<10;i++)
+		{
+			int correct=0, rightspot=0;
+			int[] guesses={-1,-1,-1,-1};
+			System.out.println();
+			System.out.println("Please enter your guess for the first number: ");
+			guesses[0]=reader.nextInt();
+			System.out.println("Please enter your guess for the second number: ");
+			guesses[1]=reader.nextInt();
+			System.out.println("Please enter your guess for the third number: ");
+			guesses[2]=reader.nextInt();
+			System.out.println("Please enter your guess for the fourth number: ");
+			guesses[3]=reader.nextInt();
+			System.out.println("You guessed "+guesses[0] +guesses[1] +guesses[2] +guesses[3]);
+			if(guesses[0]==solution[0]||guesses[0]==solution[1]||guesses[0]==solution[2]||guesses[0]==solution[3])
+			{
+				correct++;
+			}
+			if(guesses[1]==solution[0]||guesses[1]==solution[1]||guesses[1]==solution[2]||guesses[1]==solution[3])
+			{
+				correct++;
+			}
+			if(guesses[2]==solution[0]||guesses[2]==solution[1]||guesses[2]==solution[2]||guesses[2]==solution[3])
+			{
+				correct++;
+			}
+			if(guesses[3]==solution[0]||guesses[3]==solution[1]||guesses[3]==solution[2]||guesses[3]==solution[3])
+			{
+				correct++;
+			}
+			System.out.println("You have gotten "+correct+" number(s) right");
+			if(guesses[0]==solution[0])
+			{
+				rightspot++;
+			}
+			if(guesses[1]==solution[1])
+			{
+				rightspot++;
+			}
+			if(guesses[2]==solution[2])
+			{
+				rightspot++;
+			}
+			if(guesses[3]==solution[3])
+			{
+				rightspot++;
+			}
+			System.out.println("There is/are "+rightspot+" number(s) in the right spot");
+			if(correct==4&&rightspot==4)
+			{
+				System.out.println("Congratulations! You've won the game!");
+				System.out.println("The solution was "+solution[0] +solution[1] +solution[2] +solution[3]);
 			}
 		}
 		
